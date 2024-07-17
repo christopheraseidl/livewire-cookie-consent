@@ -1,0 +1,44 @@
+#cookie-policy h1,
+#cookie-policy h2 {
+    @apply font-bold;
+}
+
+#cookie-policy h1 {
+    @apply my-4 text-3xl;
+}
+
+#cookie-policy h2 {
+    @apply text-2xl;
+}
+
+#cookie-policy h3 {
+    @apply text-xl font-semibold;
+}
+
+#cookie-policy a,
+#cookie-policy .link {
+    @apply text-blue-600 dark:text-blue-400 border-blue-500 dark:border-blue-400 hover:text-orange-600 hover:border-orange-600 dark:hover:text-orange-400 dark:hover:border-orange-400 cursor-pointer;
+}
+
+#cookie-policy img,
+#cookie-policy p,
+#cookie-policy ol,
+#cookie-policy ul {
+    @apply my-4;
+}
+
+#cookie-policy ol {
+    @apply list-decimal;
+}
+
+#cookie-policy img {
+    @apply mx-auto my-10 w-full border border-gray-700 dark:border-gray-700 text-base;
+}
+
+#cookie-policy li {
+    @apply ml-8 pl-4;
+}
+
+#cookie-policy ul {
+    @apply list-disc;
+}
