@@ -4,14 +4,23 @@ namespace christopheraseidl\CookieConsent\Tests\Feature\Livewire;
 
 use christopheraseidl\CookieConsent\CookieConsentMiddleware;
 use christopheraseidl\CookieConsent\Livewire\CookieConsentModal;
-use christopheraseidl\CookieConsent\Tests\TestCase;
+use christopheraseidl\CookieConsent\Tests\CookieConsentTestCase;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Config;
 use Livewire\Livewire;
 
-class CookieConsentModalTest extends TestCase
+class CookieConsentModalTest extends CookieConsentTestCase
 {
+    /**
+     * Test whether the component renders successfully.
+     */
+    public function test_renders_successfully()
+    {
+        Livewire::test(CookieConsentModal::class)
+            ->assertStatus(200);
+    }
+    
     /**
      * Test whether the modal doesn't show when disabled via config.
      */

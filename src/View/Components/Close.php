@@ -4,6 +4,7 @@ namespace christopheraseidl\CookieConsent\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\File;
 use Illuminate\View\Component;
 
 class Close extends Component
@@ -13,7 +14,7 @@ class Close extends Component
      */
     public function render(): View|Closure|string
     {
-        $view = file_exists(resource_path('views/christopheraseidl/cookie-consent/components/close.blade.php'))
+        $view = File::exists(resource_path('views/christopheraseidl/cookie-consent/components/close.blade.php'))
             ? 'christopheraseidl.cookie-consent.components.close'
             : 'cookie-consent::components.close';
 

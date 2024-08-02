@@ -20,9 +20,6 @@
         "php": "^8.0",
         "livewire/livewire": "^3.0"
     },
-    "require-dev": {
-        "orchestra/testbench": "^9.1"
-    },
     "autoload": {
         "psr-4": {
             "christopheraseidl\\CookieConsent\\": "src/"
@@ -30,10 +27,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "christopheraseidl\\CookieConsent\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/",
-            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
-            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+            "christopheraseidl\\CookieConsent\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -45,25 +39,5 @@
                 "CookieConsent": "christopheraseidl\\CookieConsent\\Facades\\CookieConsent"
             }
         }
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "@clear",
-            "@prepare"
-        ],
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "build": "@php vendor/bin/testbench workbench:build --ansi",
-        "serve": [
-            "Composer\\Config::disableProcessTimeout",
-            "@build",
-            "@php vendor/bin/testbench serve"
-        ],
-        "lint": [
-            "@php vendor/bin/phpstan analyse"
-        ],
-        "test": [
-            "@php vendor/bin/phpunit"
-        ]
     }
 }

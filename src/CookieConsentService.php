@@ -2,9 +2,8 @@
 
 namespace christopheraseidl\CookieConsent;
 
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cookie;
-use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Request;
 
 class CookieConsentService
 {
@@ -66,7 +65,7 @@ class CookieConsentService
 
     public function getCookieFromRequest(): array|null|string
     {
-        return request()->cookie(config('cookie-consent.cookie_name'));
+        return Request::cookie(config('cookie-consent.cookie_name'));
     }
 
     public function getConsentValue(): string

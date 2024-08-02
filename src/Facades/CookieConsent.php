@@ -8,6 +8,6 @@ class CookieConsent extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'cookie_consent';
+        return \christopheraseidl\CookieConsent\CookieConsentService::class;
     }
 }

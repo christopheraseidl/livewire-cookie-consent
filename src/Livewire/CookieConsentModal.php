@@ -4,6 +4,7 @@ namespace christopheraseidl\CookieConsent\Livewire;
 
 use christopheraseidl\CookieConsent\Facades\CookieConsent;
 use christopheraseidl\CookieConsent\Traits\GivesAndRefusesConsent;
+use Illuminate\Support\Facades\File;
 use Livewire\Component;
 
 class CookieConsentModal extends Component
@@ -29,7 +30,7 @@ class CookieConsentModal extends Component
 
     public function render()
     {
-        $view = file_exists(resource_path('views/christopheraseidl/cookie-consent/livewire/cookie-consent-modal.blade.php'))
+        $view = File::exists(resource_path('views/christopheraseidl/cookie-consent/livewire/cookie-consent-modal.blade.php'))
             ? 'christopheraseidl.cookie-consent.livewire.cookie-consent-modal'
             : 'cookie-consent::livewire.cookie-consent-modal';
 
